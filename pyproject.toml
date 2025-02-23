@@ -1,13 +1,26 @@
 [tool.poetry]
-name = "psycopg-course-paper"
+name = "oop-coursework"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["aleksandr <kharitonov_am@bk.ru>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+requests = "^2.32.3"
+mypy = "^1.15.0"
+types-requests = "^2.32.0.20241016"
 
+
+[tool.poetry.group.dev.dependencies]
+pytest-cov = "^6.0.0"
+
+
+[tool.poetry.group.lint.dependencies]
+mypy = "^1.15.0"
+black = "^25.1.0"
+isort = "^6.0.0"
+flake8 = "^7.1.1"
 
 [build-system]
 requires = ["poetry-core"]
