@@ -73,3 +73,5 @@ def main() -> None:
         )
         filework.write_data(data_at_json_format)
         input("Данные записаны в файл, для продолжения работы нажмите любую клавишу")
+if __name__ == "__main__":
+    main()

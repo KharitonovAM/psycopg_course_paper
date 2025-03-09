@@ -38,6 +38,7 @@ class HH(AbstractHH):
         self.__headers = {"User-Agent": "HH-User-Agent"}
         self.__params = {"text": "", "page": 0, "per_page": 100}
         self.__vacancies = []
+        self.__companies = []
         logging_api.info(
             f"Инициализации объекта классса HH завершена, параметры {self.__params}"
         )  # логирование
@@ -101,3 +102,11 @@ class HH(AbstractHH):
             logging_api.error(
                 f"Обнаружена ошибка при подлючении к серверу, код ошибки: {self.__connection()}"
             )
+    def search_company(self, text):
+
+        """Прорабатывает результат полученный из поиска по слову и отбирает токько те вакансии,
+        в которых наименование компании соответсветствуем поисковому слову"""
+
+
+        list_with_company_like_text = [x for x in self.__vacancies if x["employer"]["name"] == text]
+        return list_with_company_like_text
