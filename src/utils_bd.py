@@ -2,6 +2,7 @@ import psycopg2
 from abc import ABC, abstractmethod
 
 from setting.db_config import config
+from typing import Any
 
 class abstrate_dbmaneger(ABC):
     '''Абстракный класс по работе с БД'''
@@ -37,7 +38,7 @@ class DBManager(abstrate_dbmaneger):
     def __init__(self, database_name):
         self.database_name = database_name
 
-    def create_database(self):
+    def create_database(self) ->None:
         """Создание базы данных и таблиц для сохранения данных о вакансиях и компаниях,
         если такая БД уже имеется - происходит её удаление и создане новой БД"""
 
@@ -61,7 +62,8 @@ class DBManager(abstrate_dbmaneger):
                     vacancy_name VARCHAR(255) NOT NULL,
                     company_id VARCHAR(80),
                     salary_from INT,
-                    salary_to INT
+                    salary_to INT,
+                    vacansy_url VARCHAR(255)
                 )
             """)
 
@@ -83,7 +85,7 @@ class DBManager(abstrate_dbmaneger):
         conn.close()
 
 
-    def insert_data_to_table(self, list_company = [], list_vacancy = []):
+    def insert_data_to_table(self, list_company:list[Any] = [], list_vacancy:list[Any] = []) -> None:
         '''функция которая принимает списки, которые нужно загрузить в БД
         и загружает иих в таблицы, если подан пустой список то он игнорируется'''
 
@@ -97,13 +99,14 @@ class DBManager(abstrate_dbmaneger):
 
             if list_vacancy:
                 for item in list_vacancy:
-                    cur.execute(f'INSERT INTO vacancies (vacanscies_id, vacancy_name, company_id, salary_from, salary_to) VALUES {item[0], item[1], item[2], item[5], item[4]};')
+                    print(item)
+                    cur.execute(f'INSERT INTO vacancies (vacanscies_id, vacancy_name, company_id, salary_from, salary_to, vacansy_url) VALUES {item[0], item[1], item[2], item[5], item[4], item[6]};')
 
         conn.commit()
         conn.close()
 
 
-    def get_companies_names(self):
+    def get_companies_names(self) -> list[Any]:
         '''Возвращает список со списком компаний, которые содержатся в БД'''
 
         params = config()
@@ -118,7 +121,7 @@ class DBManager(abstrate_dbmaneger):
         return [x[0] for x in companies_names]
 
 
-    def get_companies_and_vacancies_count(self):
+    def get_companies_and_vacancies_count(self) -> list[None]:
         '''получает список всех компаний и количество вакансий у каждой компании'''
 
         params = config()
@@ -134,14 +137,14 @@ class DBManager(abstrate_dbmaneger):
         return data_companies_and_vacancies_count
 
 
-    def get_all_vacancies(self):
+    def get_all_vacancies(self) -> list[Any]:
         '''получает список всех вакансий с указанием названия компании, названия вакансии и зарплаты и ссылки на вакансию'''
 
         params = config()
         conn = psycopg2.connect(dbname=self.database_name, **params)
         with conn.cursor() as cur:
             cur.execute("""
-                        SELECT vacancies.vacancy_name, companies.company_name, vacancies.salary_from, vacancies.salary_to
+                        SELECT vacancies.vacancy_name, companies.company_name, vacancies.salary_from, vacancies.salary_to, vacancies.vacansy_url
                         FROM companies INNER JOIN vacancies on companies.company_id = vacancies.company_id
                         """)
             data_all_vacancies = cur.fetchall()
@@ -149,7 +152,7 @@ class DBManager(abstrate_dbmaneger):
         return data_all_vacancies
 
 
-    def get_avg_salary(self):
+    def get_avg_salary(self) -> list[Any]:
         '''получает среднюю зарплату по вакансиям'''
 
         params = config()
@@ -165,7 +168,7 @@ class DBManager(abstrate_dbmaneger):
         return data_avg_salary
 
 
-    def get_vacancies_with_higher_salary(self):
+    def get_vacancies_with_higher_salary(self) -> list[Any]:
         '''получает список всех вакансий, у которых зарплата выше средней по всем вакансиям
         сравнение выполняется по параметру верхней границы вакансии'''
 
@@ -173,7 +176,7 @@ class DBManager(abstrate_dbmaneger):
         conn = psycopg2.connect(dbname=self.database_name, **params)
         with conn.cursor() as cur:
             cur.execute("""
-            SELECT vacancies.vacancy_name, companies.company_name, vacancies.salary_from, vacancies.salary_to
+            SELECT vacancies.vacancy_name, companies.company_name, vacancies.salary_from, vacancies.salary_to, vacancies.vacansy_url
             FROM companies INNER JOIN vacancies on companies.company_id = vacancies.company_id
             WHERE vacancies.salary_from >  (SELECT AVG(vacancies.salary_from) from vacancies)
             """)
@@ -182,13 +185,13 @@ class DBManager(abstrate_dbmaneger):
         return vacancies_with_higher_salary
 
 
-    def get_vacancies_with_keyword(self, looking_word):
+    def get_vacancies_with_keyword(self, looking_word:str) -> list[Any]:
         '''получает список всех вакансий, в названии которых содержатся переданные в метод слова'''
 
         params = config()
         conn = psycopg2.connect(dbname=self.database_name, **params)
         with conn.cursor() as cur:
-            cur.execute(f'SELECT vacancies.vacancy_name, companies.company_name, vacancies.salary_from, vacancies.salary_to '
+            cur.execute(f'SELECT vacancies.vacancy_name, companies.company_name, vacancies.salary_from, vacancies.salary_to, vacancies.vacansy_url '
                         f'FROM companies INNER JOIN vacancies on companies.company_id = vacancies.company_id '
                         f"WHERE vacancies.vacancy_name LIKE '%{looking_word}%';"
                         )
@@ -197,7 +200,7 @@ class DBManager(abstrate_dbmaneger):
         return vacancies_with_higher_salary
 
 
-    def clear_all_tables(self):
+    def clear_all_tables(self) -> None:
         """Удаляет все данные из таблицы вакансии"""
 
         params = config()

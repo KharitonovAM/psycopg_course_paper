@@ -106,7 +106,7 @@ class HH(AbstractHH):
             )
 
 
-    def search_company(self, text):
+    def search_company(self, text:str) -> list[Any,Any]:
 
         """Прорабатывает результат полученный из поиска по слову и отбирает токько те вакансии,
         в которых наименование компании соответсветствуем поисковому слову"""
@@ -116,7 +116,7 @@ class HH(AbstractHH):
         return list_with_company_like_text
 
 
-    def make_data_for_loading_to_bd(self, list_data):
+    def make_data_for_loading_to_bd(self, list_data:list[Any, Any]) -> list[Any,Any]:
 
         """Получает на вход список с данными по вакансиям, возвращает два списка - один для загрузки данных по вваканиям,
          второй для загрузки данных по компаниям"""
@@ -132,20 +132,6 @@ class HH(AbstractHH):
         for item in list_data:
             other_data = DataWork()
             temp_vacancy = other_data.make_vacancy_object(item)
-            vacancy_info.append([item['id'], temp_vacancy.name, item["employer"]['id'], temp_vacancy.address, temp_vacancy.salary['to'], temp_vacancy.salary['from']])
+            vacancy_info.append([item['id'], temp_vacancy.name, item["employer"]['id'], temp_vacancy.address, temp_vacancy.salary['to'], temp_vacancy.salary['from'], temp_vacancy.vacancies_url])
 
         return company_info, vacancy_info
-
-
-# z= HH()
-# y = z.search_vacancion('медпроф')
-# c = z.search_company('медпроф')
-#
-# v, b = z.make_data_for_loading_to_bd(c)
-# print(type(v))
-# for i,g in enumerate(v):
-#     print(i,'----',g)
-# print('--'*25)
-# for i,g in enumerate(b):
-#     print(i, '----', g)
-#
