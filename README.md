@@ -23,6 +23,7 @@
 - utils_vacancies.py
 - utils_api.py
 - utils-filework.py
+- utils_bd.py
 
 каждый класс и метод содержащаяся в модулях имеет docstring с опиисанием функционала
 
@@ -106,6 +107,60 @@
 - write_data
   - метод который отвечает за внесение данных в json файл
 
+### Модуль utils_bd.py
+
+Содержит абстрактный класс abstrate_dbmaneger следующей структуры
+
+  '''
+    class abstrate_dbmaneger(ABC):
+
+    @abstractmethod
+    def get_companies_and_vacancies_count(self):
+        pass
+
+    @abstractmethod
+    def get_all_vacancies(self):
+        pass
+
+    @abstractmethod
+    def get_avg_salary(self):
+        pass
+
+    @abstractmethod
+    def get_vacancies_with_higher_salary(self):
+        pass
+
+    @abstractmethod
+    def get_vacancies_with_keyword(self):
+        pass
+
+  '''
+
+на базе которой реализован DBManager(abstrate_dbmaneger)
+Этот класс отвечает за взаимодействие с базой данных  помощью методов: 
+
+- create_database(self):
+  Создание базы данных и таблиц для сохранения данных о вакансиях и компаниях, если такая БД уже имеется - происходит её удаление и создане новой БД
+- clear_all_tables(self)
+  Удаляет все данные из таблицы вакансии"
+- create_database
+  Создание базы данных и таблиц для сохранения данных о вакансиях и компаниях, если такая БД уже имеется - происходит её удаление и создане новой БД
+- get_all_vacancies
+  получает список всех вакансий с указанием названия компании, названия вакансии и зарплаты и ссылки на вакансию
+- get_avg_salary
+  получает среднюю зарплату по вакансиям
+- get_companies_and_vacancies_count
+  получает список всех компаний и количество вакансий у каждой компании
+- get_companies_names
+  Возвращает список со списком компаний, которые содержатся в БД
+- get_vacancies_with_higher_salary
+  получает список всех вакансий, у которых зарплата выше средней по всем вакансиям сравнение выполняется по параметру верхней границы вакансии"
+- get_vacancies_with_keyword
+получает список всех вакансий, в названии которых содержатся переданные в метод слова
+- insert_data_to_table
+функция которая принимает списки, которые нужно загрузить в БД и загружает иих в таблицы, если подан пустой список то он игнорируется"
+
+
 ### Модуль utils_vacancies.py
 
 Содержит абстракный класс AbsFileWork со следующей структорой
@@ -166,7 +221,7 @@
 Склонировать репозиторий:
 
     '''
-    git clone https://github.com/KharitonovAM/OOP_coursework
+    git clone https://github.com/KharitonovAM/psycopg_course_paper/tree/feature/psycopg_course_paper
     '''
 
 
