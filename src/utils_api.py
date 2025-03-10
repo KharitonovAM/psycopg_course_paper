@@ -5,7 +5,6 @@ from typing import Any
 import requests
 
 from setting.log_setting import my_log_config
-from src.utils_vacancies import Vacancies
 from src.oter_utils import DataWork
 
 logging.basicConfig = my_log_config
@@ -25,7 +24,7 @@ class AbstractHH(ABC):
         pass
 
     @abstractmethod
-    def search_vacancion(self, keyword:str):
+    def search_vacancion(self, keyword: str):
         pass
 
 
@@ -71,7 +70,7 @@ class HH(AbstractHH):
         )  # логирование
         return response.status_code
 
-    def search_vacancion(self, keyword:str) ->list[dict[Any, Any]]:
+    def search_vacancion(self, keyword: str) -> list[dict[Any, Any]]:
         """Производит поиск на сайте hh.ru вакансий, которые содержат искомый текст"""
 
         logging_api.info(f"Старт сбора вакансий по тексту {keyword}")  # логирование
@@ -105,33 +104,43 @@ class HH(AbstractHH):
                 f"Обнаружена ошибка при подлючении к серверу, код ошибки: {self.__connection()}"
             )
 
-
-    def search_company(self, text:str) -> list[Any,Any]:
-
+    def search_company(self, text: str) -> list[Any, Any]:
         """Прорабатывает результат полученный из поиска по слову и отбирает токько те вакансии,
         в которых наименование компании соответсветствуем поисковому слову"""
 
-
-        list_with_company_like_text = [x for x in self.__vacancies if x["employer"]["name"].lower() == text.lower()]
+        list_with_company_like_text = [
+            x for x in self.__vacancies if x["employer"]["name"].lower() == text.lower()
+        ]
         return list_with_company_like_text
 
-
-    def make_data_for_loading_to_bd(self, list_data:list[Any, Any]) -> list[Any,Any]:
-
-        """Получает на вход список с данными по вакансиям, возвращает два списка - один для загрузки данных по вваканиям,
-         второй для загрузки данных по компаниям"""
+    def make_data_for_loading_to_bd(self, list_data: list[Any, Any]) -> list[Any, Any]:
+        """Получает на вход список с данными по вакансиям, возвращает два списка
+         - один для загрузки данных по вваканиям,
+        второй для загрузки данных по компаниям"""
 
         vacancy_info = []
         company_info = []
-        temp_company_info = [[x["employer"]['id'], x["employer"]['name'], x["employer"]['alternate_url']] for x in list_data]
+        temp_company_info = [
+            [x["employer"]["id"], x["employer"]["name"], x["employer"]["alternate_url"]]
+            for x in list_data
+        ]
         for item in temp_company_info:
             if item not in company_info:
                 company_info.append(item)
 
-
         for item in list_data:
             other_data = DataWork()
             temp_vacancy = other_data.make_vacancy_object(item)
-            vacancy_info.append([item['id'], temp_vacancy.name, item["employer"]['id'], temp_vacancy.address, temp_vacancy.salary['to'], temp_vacancy.salary['from'], temp_vacancy.vacancies_url])
+            vacancy_info.append(
+                [
+                    item["id"],
+                    temp_vacancy.name,
+                    item["employer"]["id"],
+                    temp_vacancy.address,
+                    temp_vacancy.salary["to"],
+                    temp_vacancy.salary["from"],
+                    temp_vacancy.vacancies_url,
+                ]
+            )
 
         return company_info, vacancy_info

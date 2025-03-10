@@ -1,4 +1,5 @@
 from configparser import ConfigParser
+
 from setting.setting import BD_CONFIG_INI
 
 
@@ -14,5 +15,6 @@ def config(filename=BD_CONFIG_INI, section="postgresql"):
             db[param[0]] = param[1]
     else:
         raise Exception(
-            'Section {0} is not found in the {1} file.'.format(section, filename))
+            "Section {0} is not found in the {1} file.".format(section, filename)
+        )
     return db

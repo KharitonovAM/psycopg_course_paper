@@ -26,7 +26,7 @@ class DataWork:
 
     def make_data_to_json_from_vacancy_object_list(
         self, vacancy_list: list[Vacancies]
-    ) -> list[dict[str,Any]]:
+    ) -> list[dict[str, Any]]:
         """Формирует спиисок с данными подходящими для записи в json файл из
         списка объектов класса Json"""
 
