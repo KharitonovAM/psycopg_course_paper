@@ -5,8 +5,8 @@ from typing import Any
 import requests
 
 from setting.log_setting import my_log_config
-from utils_vacancies import Vacancies
-from oter_utils import DataWork
+from src.utils_vacancies import Vacancies
+from src.oter_utils import DataWork
 
 logging.basicConfig = my_log_config
 # определяем именные логеры
@@ -89,9 +89,9 @@ class HH(AbstractHH):
                     self.__vacancies.extend(vacancies)
                     self.__params["page"] += 1
                 except Exception:
-                    print(
-                        f"Работа поиска завершена, всего найдено {len(self.__vacancies)} вакансий"
-                    )
+                    # print(
+                    #     f"Работа поиска завершена, всего найдено {len(self.__vacancies)} вакансий"
+                    # )
                     logging_api.info(
                         "Завершена обработка поиска вакансий, всего найдено {len(self.vacancies)} вакансий"
                     )
@@ -123,7 +123,6 @@ class HH(AbstractHH):
 
         vacancy_info = []
         company_info = []
-
         temp_company_info = [[x["employer"]['id'], x["employer"]['name'], x["employer"]['alternate_url']] for x in list_data]
         for item in temp_company_info:
             if item not in company_info:
@@ -138,15 +137,15 @@ class HH(AbstractHH):
         return company_info, vacancy_info
 
 
-z= HH()
-y = z.search_vacancion('медпроф')
-c = z.search_company('медпроф')
-
-v, b = z.make_data_for_loading_to_bd(c)
-print(type(v))
-for i,g in enumerate(v):
-    print(i,'----',g)
-print('--'*25)
-for i,g in enumerate(b):
-    print(i, '----', g)
-
+# z= HH()
+# y = z.search_vacancion('медпроф')
+# c = z.search_company('медпроф')
+#
+# v, b = z.make_data_for_loading_to_bd(c)
+# print(type(v))
+# for i,g in enumerate(v):
+#     print(i,'----',g)
+# print('--'*25)
+# for i,g in enumerate(b):
+#     print(i, '----', g)
+#

@@ -103,6 +103,20 @@ class DBManager(abstrate_dbmaneger):
         conn.close()
 
 
+    def get_companies_names(self):
+        '''Возвращает список со списком компаний, которые содержатся в БД'''
+
+        params = config()
+        conn = psycopg2.connect(dbname=self.database_name, **params)
+        with conn.cursor() as cur:
+            cur.execute("""
+                SELECT companies.company_name
+                FROM companies
+                """)
+            companies_names = cur.fetchall()
+        conn.close()
+        return [x[0] for x in companies_names]
+
 
     def get_companies_and_vacancies_count(self):
         '''получает список всех компаний и количество вакансий у каждой компании'''
@@ -118,8 +132,6 @@ class DBManager(abstrate_dbmaneger):
             data_companies_and_vacancies_count = cur.fetchall()
         conn.close()
         return data_companies_and_vacancies_count
-
-
 
 
     def get_all_vacancies(self):
@@ -153,8 +165,6 @@ class DBManager(abstrate_dbmaneger):
         return data_avg_salary
 
 
-
-
     def get_vacancies_with_higher_salary(self):
         '''получает список всех вакансий, у которых зарплата выше средней по всем вакансиям
         сравнение выполняется по параметру верхней границы вакансии'''
@@ -181,34 +191,18 @@ class DBManager(abstrate_dbmaneger):
             cur.execute(f'SELECT vacancies.vacancy_name, companies.company_name, vacancies.salary_from, vacancies.salary_to '
                         f'FROM companies INNER JOIN vacancies on companies.company_id = vacancies.company_id '
                         f"WHERE vacancies.vacancy_name LIKE '%{looking_word}%';"
-                    )
+                        )
             vacancies_with_higher_salary = cur.fetchall()
         conn.close()
         return vacancies_with_higher_salary
 
 
-#
-#
-#
-#
-#
-# l = DBManager('my_test4')
-# l.create_database()
-# # q = l.get_all_vacancies()
-# # print(q)
-# # l.get_companies_and_vacancies_count()
-# q = [['9754213', 'МедПроф', 'https://hh.ru/employer/9754213'],['8918366', 'Медпроф', 'https://hh.ru/employer/8918366']]
-# w = [['117958903', 'Водитель с личным автомобилем (выездные профосмотры)', '9754213', {'city': 'Санкт-Петербург', 'street': 'Лиговский проспект', 'building': '50Д', 'lat': 59.924984, 'lng': 30.362311, 'description': None, 'raw': 'Санкт-Петербург, Лиговский проспект, 50Д', 'metro': None, 'metro_stations': [], 'id': '16173197'}, 80000, 80000],
-# ['118082913', 'Бухгалтер', '9754213', {'city': 'Санкт-Петербург', 'street': 'Лиговский проспект', 'building': '94к2', 'lat': 59.920294, 'lng': 30.355556, 'description': None, 'raw': 'Санкт-Петербург, Лиговский проспект, 94к2', 'metro': None, 'metro_stations': [], 'id': '13319383'}, 85000, 75000]
-# ]
-#
-# l.insert_data_to_table(q, w)
-#
-# test_data = l.get_all_vacancies()
-# print(test_data)
-# avg = l.get_avg_salary()
-# print(avg)
-# jjj = l.get_vacancies_with_higher_salary()
-# print(jjj)
-# fff = l.get_vacancies_with_keyword('выездные')
-# print(type(fff[0]))
+    def clear_all_tables(self):
+        """Удаляет все данные из таблицы вакансии"""
+
+        params = config()
+        conn = psycopg2.connect(dbname=self.database_name, **params)
+        with conn.cursor() as cur:
+            cur.execute("TRUNCATE TABLE vacancies, companies;")
+        conn.commit()
+        conn.close()

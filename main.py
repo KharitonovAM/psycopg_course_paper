@@ -1,6 +1,8 @@
 from src.oter_utils import DataWork
 from src.utils_api import HH
 from src.utils_filework import FileWork
+from src.utils_bd import DBManager
+
 
 
 def main() -> None:
@@ -9,17 +11,18 @@ def main() -> None:
     other_functions = DataWork()
     filework = FileWork()
 
+
     while True:
 
         print(
             """
         \tДобро пожаловать в программу, которая позволит вам упростить взаимодействие с сайтом hh.ru
-        Программа позволит вам упростить получение информации, и поддердивает следующий функционал:
-        - поиск по кючевому слову
-        - фильтрацию по зарплате
-        - возможность вывести ограниченное количество вакансий (с максимальной запрлатой)
-
-        Данные по заработной плате валидируются, если значение не было указано, то оно принимает значение равное 0
+        
+        
+        Программа позволит упростить получение информации, а так же хранить данные по вакансиям компаний, 
+        которые вас интересуют. 
+        
+        Для её использования следуйте подсказкам на вашем экране.
         """
         )
 
@@ -28,50 +31,77 @@ def main() -> None:
             input("\nРабота программы прекращена. Хорошего дня!")
             break
 
-        lookihg_word = input(
-            "Введите слово, по которому будем искать вакансии на сайте hh.ru\n"
-        )
-        vacansy_object = HH()
-        vacansy_list = vacansy_object.search_vacancion(lookihg_word)
-        vacansy_object_list = list(
-            map(other_functions.make_vacancy_object, vacansy_list)
-        )
-        print(f"Поиск вакансий завершен, всего нашлось {len(vacansy_object_list)}")
-        user_sorted = input(
-            "Отсортировать полученный список по зарплате? (от наибольшей к наименьшей) y/n\n"
-        )
-        while user_sorted.lower() not in ("y", "n"):
-            user_sorted = input(
-                "Вы ввели неверный вариант, повторите пожалуйста ввод\n"
-            )
-        if user_sorted.upper() == "Y":
-            vacansy_object_list = other_functions.sort_vacancies(vacansy_object_list)
-        number_vacancies = input(
-            """Какое количество вакансий вы хотите просмотреть?
-         Если хотите просмотреть все вакансии - введите любой нечисловой символ\n"""
-        )
-        if (
-            number_vacancies.isdigit() is False
-            or int(number_vacancies) < 0
-            or int(number_vacancies) > len(vacansy_object_list)
-        ):
-            number_vacancies = len(vacansy_object_list)
-        vacansy_object_list = vacansy_object_list[:number_vacancies]
-        print_before_saving = input("Вывести список на экран? (Y/N)")
-        while print_before_saving.lower() not in ("y", "n"):
-            print_before_saving = input(
-                "Вы ввели неверный вариант, повторите пожалуйста ввод\n"
-            )
-        if print_before_saving.lower() == "y":
-            for i, v in enumerate(vacansy_object_list):
-                print(i + 1, "---", v)
+        dbname = input("Введите наименоваине базы данных к которой будемм подлючаться.\nЕсли такой базы данных не существует, она будет создана\n")
+        my_database = DBManager(dbname)
+        try:
+            companies_in_db = my_database.get_companies_names()
+            if len(companies_in_db) == 0:
+                print("В базе данных нет компаний")
+            else:
+                message = f'Сейчас в БД содержится {len(companies_in_db)} компаний, а именно: '
+                print(message, companies_in_db)
+        except Exception:
+            my_database.create_database()
+            print('Создана новая база данных')
+            companies_in_db = my_database.get_companies_names()
 
-        data_at_json_format = (
-            other_functions.make_data_to_json_from_vacancy_object_list(
-                vacansy_object_list
-            )
-        )
-        filework.write_data(data_at_json_format)
-        input("Данные записаны в файл, для продолжения работы нажмите любую клавишу")
+        while len(companies_in_db) < 10:
+            print(f'В базе данных должно быыть 10 компаний, у вас пока {len(companies_in_db)}')
+            new_company_name = input('Введите название компании, которую добавил в базу данных: \n')
+            vac_data = HH()
+            vac_data.search_vacancion(new_company_name)
+            list_to_load = vac_data.search_company(new_company_name)
+            if list_to_load:
+                comp_data, vac_data = vac_data.make_data_for_loading_to_bd(list_to_load)
+                my_database.insert_data_to_table(comp_data, vac_data)
+            else:
+                print('Компания с таким наименованием не размещает вакансии на hh.ru')
+            companies_in_db = my_database.get_companies_names()
+
+        user_choose = ''
+        while user_choose != '8':
+            user_choose = input("""В базе данных достаточно компаний, теперь можно приступить к работе с данными из базы данных
+            Выберете, какие действия далее выполнить?
+            1 - Обновить данные по вакансиям
+            2 - Получить список всех компаний и количество вакансий у каждой компании
+            3 - Получить список всех вакансий
+            4 - получает среднюю зарплату по вакансиям
+            5 - Получить список всех вакансий, у которых зарплата выше средней
+            6 - Отобрать вакансии с определенным названием
+            7 - Отобразить данные по всем компания
+            8 - Запустить программу еще раз
+            
+            """)
+            match user_choose:
+                case '1':
+                    company_names = my_database.get_companies_names()
+                    company_names = list(set([x.lower() for x in company_names]))
+                    my_database.clear_all_tables()
+                    for company_name in company_names:
+                        vac_data = HH()
+                        vac_data.search_vacancion(company_name)
+                        list_to_load = vac_data.search_company(company_name)
+                        comp_data, vac_data = vac_data.make_data_for_loading_to_bd(list_to_load)
+                        my_database.insert_data_to_table(comp_data, vac_data)
+                    print('Список вакансий обновлён')
+                case '2':
+                    for item in my_database.get_companies_and_vacancies_count():
+                        print(item[0],'----',item[1])
+                case '3':
+                    for i,v in enumerate(my_database.get_all_vacancies()):
+                        print(i,'---', v)
+                case '4':
+                    print("Средняя зарплата по нижнему параметру", my_database.get_avg_salary()[0])
+                    print("Средняя зарплата по нижнему параметру", my_database.get_avg_salary()[1])
+                case '5':
+                    for i,v in enumerate(my_database.get_vacancies_with_higher_salary()):
+                        print(i,'---', v)
+                case '6':
+                    looking_word = input('Введите слово, чтобы найти вакансии в названии которых оно встречается\n')
+                    print(my_database.get_vacancies_with_keyword(looking_word))
+                case '7':
+                    print(my_database.get_companies_names())
+
+
 if __name__ == "__main__":
     main()
