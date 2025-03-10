@@ -137,16 +137,16 @@ class HH(AbstractHH):
 
         return company_info, vacancy_info
 
-#
-# z= HH()
-# y = z.search_vacancion('медпроф')
-# c = z.search_company('медпроф')
-#
-# v, b = z.make_data_for_loading_to_bd(c)
-# print(type(v))
-# for i,g in enumerate(v):
-#     print(i,'----',g)
-# print('--'*25)
-# for i,g in enumerate(b):
-#     print(i, '----', g)
+
+z= HH()
+y = z.search_vacancion('медпроф')
+c = z.search_company('медпроф')
+
+v, b = z.make_data_for_loading_to_bd(c)
+print(type(v))
+for i,g in enumerate(v):
+    print(i,'----',g)
+print('--'*25)
+for i,g in enumerate(b):
+    print(i, '----', g)
 
