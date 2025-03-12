@@ -1,6 +1,6 @@
 import logging
-from setting.setting import LOG_FILE
 
+from setting.setting import LOG_FILE
 
 # задаем параметры для логирования
 my_log_config = logging.basicConfig(

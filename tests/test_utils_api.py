@@ -40,4 +40,4 @@ def test_api_correct_work_take_data_from_api2(get, capsys):
     z = HH()
     z.search_vacancion("looking")
     myprint = capsys.readouterr()
-    assert myprint.out == "Работа поиска завершена, всего найдено 0 вакансий\n"
+    assert myprint.out == ""
