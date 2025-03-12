@@ -1,334 +1,167 @@
-2025-03-10 22:54:57,265 - INFO- api_utils - Старт инициализации объекта классса HH
-2025-03-10 22:54:57,265 - INFO- api_utils - Инициализации объекта классса HH завершена, параметры {'text': '', 'page': 0, 'per_page': 100}
-2025-03-10 22:54:57,266 - INFO- api_utils - Старт сбора вакансий по тексту ПИК
-2025-03-10 22:54:57,266 - INFO- api_utils - Проводим подклчение к серверу
-2025-03-10 22:54:57,270 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:54:57,626 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies HTTP/1.1" 200 None
-2025-03-10 22:54:57,629 - INFO- api_utils - Ответ полученный от сервера имеет код 200
-2025-03-10 22:54:57,630 - INFO- api_utils - Обработали информацию по странице № 0
-2025-03-10 22:54:57,632 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:54:58,055 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9F%D0%98%D0%9A&page=0&per_page=100 HTTP/1.1" 200 None
-2025-03-10 22:54:58,114 - INFO- api_utils - Обработали информацию по странице № 1
-2025-03-10 22:54:58,115 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:54:58,494 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9F%D0%98%D0%9A&page=1&per_page=100 HTTP/1.1" 200 None
-2025-03-10 22:54:58,550 - INFO- api_utils - Обработали информацию по странице № 2
-2025-03-10 22:54:58,551 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:54:58,956 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9F%D0%98%D0%9A&page=2&per_page=100 HTTP/1.1" 200 None
-2025-03-10 22:54:59,010 - INFO- api_utils - Обработали информацию по странице № 3
-2025-03-10 22:54:59,011 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:54:59,415 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9F%D0%98%D0%9A&page=3&per_page=100 HTTP/1.1" 200 None
-2025-03-10 22:54:59,482 - INFO- api_utils - Обработали информацию по странице № 4
-2025-03-10 22:54:59,483 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:54:59,892 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9F%D0%98%D0%9A&page=4&per_page=100 HTTP/1.1" 200 None
-2025-03-10 22:54:59,940 - INFO- api_utils - Обработали информацию по странице № 5
-2025-03-10 22:54:59,941 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:00,366 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9F%D0%98%D0%9A&page=5&per_page=100 HTTP/1.1" 200 None
-2025-03-10 22:55:00,416 - INFO- api_utils - Обработали информацию по странице № 6
-2025-03-10 22:55:00,417 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:00,800 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9F%D0%98%D0%9A&page=6&per_page=100 HTTP/1.1" 200 None
-2025-03-10 22:55:00,849 - INFO- api_utils - Обработали информацию по странице № 7
-2025-03-10 22:55:00,851 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:01,249 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9F%D0%98%D0%9A&page=7&per_page=100 HTTP/1.1" 200 None
-2025-03-10 22:55:01,297 - INFO- api_utils - Обработали информацию по странице № 8
-2025-03-10 22:55:01,299 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:01,745 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9F%D0%98%D0%9A&page=8&per_page=100 HTTP/1.1" 200 None
-2025-03-10 22:55:01,800 - INFO- api_utils - Обработали информацию по странице № 9
-2025-03-10 22:55:01,801 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:02,402 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9F%D0%98%D0%9A&page=9&per_page=100 HTTP/1.1" 200 None
-2025-03-10 22:55:02,471 - INFO- api_utils - Обработали информацию по странице № 10
-2025-03-10 22:55:02,472 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:02,977 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9F%D0%98%D0%9A&page=10&per_page=100 HTTP/1.1" 200 None
-2025-03-10 22:55:03,026 - INFO- api_utils - Обработали информацию по странице № 11
-2025-03-10 22:55:03,027 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:03,426 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9F%D0%98%D0%9A&page=11&per_page=100 HTTP/1.1" 200 None
-2025-03-10 22:55:03,473 - INFO- api_utils - Обработали информацию по странице № 12
-2025-03-10 22:55:03,474 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:03,914 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9F%D0%98%D0%9A&page=12&per_page=100 HTTP/1.1" 200 None
-2025-03-10 22:55:03,968 - INFO- api_utils - Обработали информацию по странице № 13
-2025-03-10 22:55:03,969 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:04,469 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9F%D0%98%D0%9A&page=13&per_page=100 HTTP/1.1" 200 None
-2025-03-10 22:55:04,513 - INFO- api_utils - Обработали информацию по странице № 14
-2025-03-10 22:55:04,515 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:04,970 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9F%D0%98%D0%9A&page=14&per_page=100 HTTP/1.1" 200 None
-2025-03-10 22:55:05,031 - INFO- api_utils - Обработали информацию по странице № 15
-2025-03-10 22:55:05,032 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:05,520 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9F%D0%98%D0%9A&page=15&per_page=100 HTTP/1.1" 200 None
-2025-03-10 22:55:05,594 - INFO- api_utils - Обработали информацию по странице № 16
-2025-03-10 22:55:05,595 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:05,995 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9F%D0%98%D0%9A&page=16&per_page=100 HTTP/1.1" 200 None
-2025-03-10 22:55:06,041 - INFO- api_utils - Обработали информацию по странице № 17
-2025-03-10 22:55:06,042 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:06,524 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9F%D0%98%D0%9A&page=17&per_page=100 HTTP/1.1" 200 None
-2025-03-10 22:55:06,578 - INFO- api_utils - Обработали информацию по странице № 18
-2025-03-10 22:55:06,579 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:07,038 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9F%D0%98%D0%9A&page=18&per_page=100 HTTP/1.1" 200 None
-2025-03-10 22:55:07,091 - INFO- api_utils - Обработали информацию по странице № 19
-2025-03-10 22:55:07,092 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:07,475 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9F%D0%98%D0%9A&page=19&per_page=100 HTTP/1.1" 200 None
-2025-03-10 22:55:07,526 - INFO- api_utils - Обработали информацию по странице № 20
-2025-03-10 22:55:07,527 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:07,682 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9F%D0%98%D0%9A&page=20&per_page=100 HTTP/1.1" 400 352
-2025-03-10 22:55:07,683 - INFO- api_utils - Завершена обработка поиска вакансий, всего найдено {len(self.vacancies)} вакансий
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Водитель-экспедитор, None, {'from': 60000, 'to': None, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/117308292, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 60000
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 60000
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Менеджер учебного центра по взаимодействию с клиентами, {'city': 'Хабаровск', 'street': 'улица Калинина', 'building': '37', 'lat': 48.470852, 'lng': 135.067174, 'description': None, 'raw': 'Хабаровск, улица Калинина, 37', 'metro': None, 'metro_stations': [], 'id': '1403474'}, {'from': 55000, 'to': None, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/118019391, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 55000
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 55000
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Садовник, {'city': 'село Вознесенка', 'street': 'Берёзовая улица', 'building': None, 'lat': 54.988283, 'lng': 61.371975, 'description': None, 'raw': 'село Вознесенка, Берёзовая улица', 'metro': None, 'metro_stations': [], 'id': '15974003'}, {'from': 60000, 'to': None, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/117876965, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 60000
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 60000
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Инженер-электрик, {'city': 'Хабаровск', 'street': 'улица Калинина', 'building': '37', 'lat': 48.470852, 'lng': 135.067174, 'description': None, 'raw': 'Хабаровск, улица Калинина, 37', 'metro': None, 'metro_stations': [], 'id': '1403474'}, {'from': 100000, 'to': None, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/118019334, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 100000
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 100000
-2025-03-10 22:55:07,686 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Менеджер отдела продаж, {'city': 'Хабаровск', 'street': 'улица Калинина', 'building': '37', 'lat': 48.470852, 'lng': 135.067174, 'description': None, 'raw': 'Хабаровск, улица Калинина, 37', 'metro': None, 'metro_stations': [], 'id': '1403474'}, {'from': 60000, 'to': None, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/118019220, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 60000
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 60000
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Ведущий экономист, {'city': 'Самара', 'street': 'улица Авроры', 'building': '110к2', 'lat': 53.19297, 'lng': 50.189971, 'description': None, 'raw': 'Самара, улица Авроры, 110к2', 'metro': {'station_name': 'Гагаринская', 'line_name': 'Первая', 'station_id': '54.309', 'line_id': '54', 'lat': 53.200442, 'lng': 50.176595}, 'metro_stations': [{'station_name': 'Гагаринская', 'line_name': 'Первая', 'station_id': '54.309', 'line_id': '54', 'lat': 53.200442, 'lng': 50.176595}, {'station_name': 'Спортивная', 'line_name': 'Первая', 'station_id': '54.310', 'line_id': '54', 'lat': 53.201121, 'lng': 50.199286}], 'id': '13967242'}, {'from': 50000, 'to': 50000, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/117674603, [{'id': 'FLEXIBLE', 'name': 'Свободный'}]
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 50000
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 50000
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Мебельщик, {'city': 'Колпино', 'street': 'Финляндская улица', 'building': '23Щ', 'lat': 59.75807016438982, 'lng': 30.550021239123225, 'description': None, 'raw': 'Колпино, Финляндская улица, 23Щ', 'metro': None, 'metro_stations': [], 'id': '13061058'}, {'from': 80000, 'to': 150000, 'currency': 'RUR', 'gross': True}, https://hh.ru/vacancy/117688520, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 80000
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 150000
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Технический эксперт, {'city': 'Кемерово', 'street': 'улица Радищева', 'building': None, 'lat': 55.317886, 'lng': 86.087647, 'description': None, 'raw': 'Кемерово, улица Радищева', 'metro': None, 'metro_stations': [], 'id': '17484990'}, {'from': 50000, 'to': 50000, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/116778425, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 50000
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 50000
-2025-03-10 22:55:07,687 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:07,688 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Технический эксперт, None, {'from': 50000, 'to': 50000, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/116481953, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:07,688 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:07,688 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 50000
-2025-03-10 22:55:07,688 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:07,688 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 50000
-2025-03-10 22:55:07,688 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:20,283 - INFO- api_utils - Старт инициализации объекта классса HH
-2025-03-10 22:55:20,283 - INFO- api_utils - Инициализации объекта классса HH завершена, параметры {'text': '', 'page': 0, 'per_page': 100}
-2025-03-10 22:55:20,283 - INFO- api_utils - Старт сбора вакансий по тексту МедСервис
-2025-03-10 22:55:20,283 - INFO- api_utils - Проводим подклчение к серверу
-2025-03-10 22:55:20,286 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:20,671 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies HTTP/1.1" 200 None
-2025-03-10 22:55:20,673 - INFO- api_utils - Ответ полученный от сервера имеет код 200
-2025-03-10 22:55:20,674 - INFO- api_utils - Обработали информацию по странице № 0
-2025-03-10 22:55:20,676 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:21,080 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81&page=0&per_page=100 HTTP/1.1" 200 None
-2025-03-10 22:55:21,086 - INFO- api_utils - Обработали информацию по странице № 1
-2025-03-10 22:55:21,087 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:21,305 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81&page=1&per_page=100 HTTP/1.1" 200 312
-2025-03-10 22:55:21,307 - INFO- api_utils - Обработали информацию по странице № 2
-2025-03-10 22:55:21,309 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:21,529 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81&page=2&per_page=100 HTTP/1.1" 200 312
-2025-03-10 22:55:21,531 - INFO- api_utils - Обработали информацию по странице № 3
-2025-03-10 22:55:21,534 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:21,781 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81&page=3&per_page=100 HTTP/1.1" 200 312
-2025-03-10 22:55:21,784 - INFO- api_utils - Обработали информацию по странице № 4
-2025-03-10 22:55:21,786 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:22,019 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81&page=4&per_page=100 HTTP/1.1" 200 312
-2025-03-10 22:55:22,022 - INFO- api_utils - Обработали информацию по странице № 5
-2025-03-10 22:55:22,024 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:22,337 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81&page=5&per_page=100 HTTP/1.1" 200 312
-2025-03-10 22:55:22,339 - INFO- api_utils - Обработали информацию по странице № 6
-2025-03-10 22:55:22,342 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:22,578 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81&page=6&per_page=100 HTTP/1.1" 200 312
-2025-03-10 22:55:22,580 - INFO- api_utils - Обработали информацию по странице № 7
-2025-03-10 22:55:22,583 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:22,814 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81&page=7&per_page=100 HTTP/1.1" 200 312
-2025-03-10 22:55:22,817 - INFO- api_utils - Обработали информацию по странице № 8
-2025-03-10 22:55:22,819 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:23,065 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81&page=8&per_page=100 HTTP/1.1" 200 312
-2025-03-10 22:55:23,068 - INFO- api_utils - Обработали информацию по странице № 9
-2025-03-10 22:55:23,070 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:23,357 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81&page=9&per_page=100 HTTP/1.1" 200 312
-2025-03-10 22:55:23,360 - INFO- api_utils - Обработали информацию по странице № 10
-2025-03-10 22:55:23,362 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:23,679 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81&page=10&per_page=100 HTTP/1.1" 200 314
-2025-03-10 22:55:23,681 - INFO- api_utils - Обработали информацию по странице № 11
-2025-03-10 22:55:23,683 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:23,914 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81&page=11&per_page=100 HTTP/1.1" 200 314
-2025-03-10 22:55:23,917 - INFO- api_utils - Обработали информацию по странице № 12
-2025-03-10 22:55:23,920 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:24,152 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81&page=12&per_page=100 HTTP/1.1" 200 314
-2025-03-10 22:55:24,155 - INFO- api_utils - Обработали информацию по странице № 13
-2025-03-10 22:55:24,157 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:24,387 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81&page=13&per_page=100 HTTP/1.1" 200 314
-2025-03-10 22:55:24,389 - INFO- api_utils - Обработали информацию по странице № 14
-2025-03-10 22:55:24,391 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:24,619 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81&page=14&per_page=100 HTTP/1.1" 200 314
-2025-03-10 22:55:24,621 - INFO- api_utils - Обработали информацию по странице № 15
-2025-03-10 22:55:24,624 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:24,861 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81&page=15&per_page=100 HTTP/1.1" 200 314
-2025-03-10 22:55:24,864 - INFO- api_utils - Обработали информацию по странице № 16
-2025-03-10 22:55:24,865 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:25,126 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81&page=16&per_page=100 HTTP/1.1" 200 314
-2025-03-10 22:55:25,129 - INFO- api_utils - Обработали информацию по странице № 17
-2025-03-10 22:55:25,131 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:25,410 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81&page=17&per_page=100 HTTP/1.1" 200 314
-2025-03-10 22:55:25,413 - INFO- api_utils - Обработали информацию по странице № 18
-2025-03-10 22:55:25,414 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:25,681 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81&page=18&per_page=100 HTTP/1.1" 200 314
-2025-03-10 22:55:25,683 - INFO- api_utils - Обработали информацию по странице № 19
-2025-03-10 22:55:25,686 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:25,937 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81&page=19&per_page=100 HTTP/1.1" 200 314
-2025-03-10 22:55:25,940 - INFO- api_utils - Обработали информацию по странице № 20
-2025-03-10 22:55:25,942 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-03-10 22:55:26,092 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81&page=20&per_page=100 HTTP/1.1" 400 352
-2025-03-10 22:55:26,093 - INFO- api_utils - Завершена обработка поиска вакансий, всего найдено {len(self.vacancies)} вакансий
-2025-03-10 22:55:26,094 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Администратор в медицинскую лабораторию, {'city': 'Махачкала', 'street': 'улица Абубакарова', 'building': '14', 'lat': 42.977223, 'lng': 47.499364, 'description': None, 'raw': 'Махачкала, улица Абубакарова, 14', 'metro': None, 'metro_stations': [], 'id': '3832700'}, {'from': 70000, 'to': 70000, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/118027465, [{'id': 'SIX_ON_ONE_OFF', 'name': '6/1'}]
-2025-03-10 22:55:26,094 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:26,094 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 70000
-2025-03-10 22:55:26,094 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:26,094 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 70000
-2025-03-10 22:55:26,094 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:26,094 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Специалист отдела сопровождения, None, {'from': 70000, 'to': None, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/117752088, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:26,094 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:26,094 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 70000
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 70000
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Секретарь на ресепшен, {'city': 'Москва', 'street': 'Партийный переулок', 'building': '1к57с1', 'lat': 55.719571, 'lng': 37.629439, 'description': None, 'raw': 'Москва, Партийный переулок, 1к57с1', 'metro': {'station_name': 'Павелецкая', 'line_name': 'Замоскворецкая', 'station_id': '2.101', 'line_id': '2', 'lat': 55.729741, 'lng': 37.638693}, 'metro_stations': [{'station_name': 'Павелецкая', 'line_name': 'Замоскворецкая', 'station_id': '2.101', 'line_id': '2', 'lat': 55.729741, 'lng': 37.638693}, {'station_name': 'Серпуховская', 'line_name': 'Серпуховско-Тимирязевская', 'station_id': '9.37', 'line_id': '9', 'lat': 55.726548, 'lng': 37.624792}], 'id': '165435'}, {'from': 68000, 'to': None, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/117774042, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 68000
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 68000
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Лаборант, {'city': 'Махачкала', 'street': 'улица Абубакарова', 'building': '14', 'lat': 42.977223, 'lng': 47.499364, 'description': None, 'raw': 'Махачкала, улица Абубакарова, 14', 'metro': None, 'metro_stations': [], 'id': '3832700'}, {'from': 60000, 'to': 70000, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/118098137, [{'id': 'SIX_ON_ONE_OFF', 'name': '6/1'}]
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 60000
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 70000
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Сервисный инженер по медицинской технике (лаборатария, in vitro), {'city': 'Москва', 'street': 'Партийный переулок', 'building': '1к57с1', 'lat': 55.719571, 'lng': 37.629439, 'description': None, 'raw': 'Москва, Партийный переулок, 1к57с1', 'metro': {'station_name': 'Павелецкая', 'line_name': 'Замоскворецкая', 'station_id': '2.101', 'line_id': '2', 'lat': 55.729741, 'lng': 37.638693}, 'metro_stations': [{'station_name': 'Павелецкая', 'line_name': 'Замоскворецкая', 'station_id': '2.101', 'line_id': '2', 'lat': 55.729741, 'lng': 37.638693}, {'station_name': 'Серпуховская', 'line_name': 'Серпуховско-Тимирязевская', 'station_id': '9.37', 'line_id': '9', 'lat': 55.726548, 'lng': 37.624792}], 'id': '165435'}, {'from': 100000, 'to': 144800, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/117210306, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 100000
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 144800
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Администратор медицинской клиники, {'city': 'Владимир', 'street': 'улица Горького', 'building': '27', 'lat': 56.13731, 'lng': 40.400652, 'description': None, 'raw': 'Владимир, улица Горького, 27', 'metro': None, 'metro_stations': [], 'id': '3716501'}, {'from': 45000, 'to': 55000, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/117805248, [{'id': 'TWO_ON_TWO_OFF', 'name': '2/2'}]
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 45000
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 55000
-2025-03-10 22:55:26,095 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Оператор call-центра, None, {'from': 60000, 'to': None, 'currency': 'RUR', 'gross': True}, https://hh.ru/vacancy/117136053, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 60000
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 60000
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Медицинский регистратор, {'city': 'Хабаровск', 'street': 'Краснореченская улица', 'building': '60', 'lat': 48.402361, 'lng': 135.102819, 'description': None, 'raw': 'Хабаровск, Краснореченская улица, 60', 'metro': None, 'metro_stations': [], 'id': '6307953'}, {'from': 35000, 'to': 35000, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/117712359, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 35000
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 35000
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Специалист тендерного отдела, {'city': 'Ростов-на-Дону', 'street': 'улица Мечникова', 'building': '140А', 'lat': 47.236556, 'lng': 39.704179, 'description': None, 'raw': 'Ростов-на-Дону, улица Мечникова, 140А', 'metro': None, 'metro_stations': [], 'id': '15454998'}, {'from': 60000, 'to': 65000, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/117834673, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 60000
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 65000
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Врач-терапевт, None, {'from': 100000, 'to': None, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/117123294, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 100000
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 100000
-2025-03-10 22:55:26,096 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Медсестра/медбрат кабинета МРТ, {'city': 'Ижевск', 'street': 'Фронтовая улица', 'building': '2', 'lat': 56.84932, 'lng': 53.244961, 'description': None, 'raw': 'Ижевск, Фронтовая улица, 2', 'metro': None, 'metro_stations': [], 'id': '17551853'}, {'from': 40000, 'to': None, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/117259253, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}, {'id': 'FOUR_ON_THREE_OFF', 'name': '4/3'}]
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 40000
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 40000
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Санитарка/санитар, {'city': 'Владимир', 'street': 'улица Горького', 'building': '27', 'lat': 56.13731, 'lng': 40.400652, 'description': None, 'raw': 'Владимир, улица Горького, 27', 'metro': None, 'metro_stations': [], 'id': '3716501'}, {'from': 20000, 'to': 25000, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/117248361, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}, {'id': 'TWO_ON_TWO_OFF', 'name': '2/2'}]
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 20000
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 25000
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Оператор call-центра, {'city': 'Ижевск', 'street': 'Фронтовая улица', 'building': '2', 'lat': 56.84932, 'lng': 53.244961, 'description': None, 'raw': 'Ижевск, Фронтовая улица, 2', 'metro': None, 'metro_stations': [], 'id': '17551853'}, {'from': 35000, 'to': None, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/117259254, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}, {'id': 'TWO_ON_TWO_OFF', 'name': '2/2'}]
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 35000
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 35000
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Медицинский регистратор/Администратор, {'city': 'Ижевск', 'street': 'улица Холмогорова', 'building': '17', 'lat': 56.876166, 'lng': 53.212164, 'description': None, 'raw': 'Ижевск, улица Холмогорова, 17', 'metro': None, 'metro_stations': [], 'id': '17554590'}, {'from': 35000, 'to': None, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/117259285, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 35000
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 35000
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Врач-офтальмолог в медицинский центр (м. Купчино), {'city': 'Санкт-Петербург', 'street': 'улица Ярослава Гашека', 'building': '9к1', 'lat': 59.831114, 'lng': 30.388048, 'description': None, 'raw': 'Санкт-Петербург, улица Ярослава Гашека, 9к1', 'metro': {'station_name': 'Купчино', 'line_name': 'Московско-Петроградская', 'station_id': '15.226', 'line_id': '15', 'lat': 59.829781, 'lng': 30.375702}, 'metro_stations': [{'station_name': 'Купчино', 'line_name': 'Московско-Петроградская', 'station_id': '15.226', 'line_id': '15', 'lat': 59.829781, 'lng': 30.375702}], 'id': '317873'}, {'from': 80000, 'to': None, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/117256508, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}, {'id': 'TWO_ON_TWO_OFF', 'name': '2/2'}]
-2025-03-10 22:55:26,097 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:26,098 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 80000
-2025-03-10 22:55:26,098 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:26,098 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 80000
-2025-03-10 22:55:26,098 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:26,098 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Медицинская сестра / Медицинский брат, {'city': 'Новокуйбышевск', 'street': 'улица 50-летия НПЗ', 'building': '5', 'lat': 53.100367, 'lng': 49.945961, 'description': None, 'raw': 'Новокуйбышевск, улица 50-летия НПЗ, 5', 'metro': None, 'metro_stations': [], 'id': '14845807'}, {'from': 28000, 'to': None, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/117715128, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:26,098 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:26,098 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 28000
-2025-03-10 22:55:26,098 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:26,098 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 28000
-2025-03-10 22:55:26,098 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:26,098 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Руководитель клиентского сервиса, {'city': 'Владимир', 'street': 'улица Горького', 'building': '27', 'lat': 56.13731, 'lng': 40.400652, 'description': None, 'raw': 'Владимир, улица Горького, 27', 'metro': None, 'metro_stations': [], 'id': '3716501'}, {'from': 65000, 'to': 80000, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/117406510, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:26,098 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:26,098 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 65000
-2025-03-10 22:55:26,098 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:26,098 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 80000
-2025-03-10 22:55:26,098 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:26,098 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Врач акушер-гинеколог, УЗИ, None, {'from': 100000, 'to': None, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/117829750, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:26,098 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:26,098 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 100000
-2025-03-10 22:55:26,098 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:26,098 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 100000
-2025-03-10 22:55:26,098 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:26,098 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Инженер по ремонту медицинского оборудования, {'city': 'Саратов', 'street': 'микрорайон Первомайский, 2-й проезд', 'building': '2/1', 'lat': 51.522333, 'lng': 45.998531, 'description': None, 'raw': 'Саратов, микрорайон Первомайский, 2-й проезд, 2/1', 'metro': None, 'metro_stations': [], 'id': '5846537'}, None, https://hh.ru/vacancy/116109888, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 0
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 0
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Врач-рентгенолог, {'city': 'Санкт-Петербург', 'street': 'Лесной проспект', 'building': '63', 'lat': 59.985471935399936, 'lng': 30.343387417333865, 'description': None, 'raw': 'Санкт-Петербург, Лесной проспект, 63', 'metro': {'station_name': 'Лесная', 'line_name': 'Кировско-Выборгская', 'station_id': '14.195', 'line_id': '14', 'lat': 59.984947, 'lng': 30.344259}, 'metro_stations': [{'station_name': 'Лесная', 'line_name': 'Кировско-Выборгская', 'station_id': '14.195', 'line_id': '14', 'lat': 59.984947, 'lng': 30.344259}], 'id': '486531'}, {'from': 80000, 'to': None, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/117123667, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 80000
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 80000
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Управляющий/директор (руководитель многопрофильной медицинской клиники "Денова"), {'city': 'Владимир', 'street': 'улица Горького', 'building': '27', 'lat': 56.13731, 'lng': 40.400652, 'description': None, 'raw': 'Владимир, улица Горького, 27', 'metro': None, 'metro_stations': [], 'id': '3716501'}, {'from': None, 'to': 110000, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/117532206, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 0
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 110000
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Оператор call-центра/Телемаркетолог, {'city': 'Санкт-Петербург', 'street': 'Лесной проспект', 'building': '63', 'lat': 59.985471935399936, 'lng': 30.343387417333865, 'description': None, 'raw': 'Санкт-Петербург, Лесной проспект, 63', 'metro': {'station_name': 'Лесная', 'line_name': 'Кировско-Выборгская', 'station_id': '14.195', 'line_id': '14', 'lat': 59.984947, 'lng': 30.344259}, 'metro_stations': [{'station_name': 'Лесная', 'line_name': 'Кировско-Выборгская', 'station_id': '14.195', 'line_id': '14', 'lat': 59.984947, 'lng': 30.344259}], 'id': '486531'}, {'from': 60000, 'to': None, 'currency': 'RUR', 'gross': False}, https://hh.ru/vacancy/117684544, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 60000
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 60000
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными Врач стоматолог-терапевт, {'city': 'Новокуйбышевск', 'street': 'улица 50-летия НПЗ', 'building': '5', 'lat': 53.100367, 'lng': 49.945961, 'description': None, 'raw': 'Новокуйбышевск, улица 50-летия НПЗ, 5', 'metro': None, 'metro_stations': [], 'id': '14845807'}, None, https://hh.ru/vacancy/117705485, [{'id': 'FIVE_ON_TWO_OFF', 'name': '5/2'}]
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 0
-2025-03-10 22:55:26,099 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-03-10 22:55:26,100 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 0
-2025-03-10 22:55:26,100 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-03-12 22:09:15,048 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными 3, 3, {'from': 3, 'to': 3}, http://myurl.com, daily
+2025-03-12 22:09:15,049 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-03-12 22:09:15,049 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 3
+2025-03-12 22:09:15,049 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-03-12 22:09:15,049 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 3
+2025-03-12 22:09:15,050 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-03-12 22:09:15,050 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными 4, 4, {'from': 4, 'to': 4}, http://myurl.com, daily
+2025-03-12 22:09:15,050 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-03-12 22:09:15,050 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 4
+2025-03-12 22:09:15,050 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-03-12 22:09:15,050 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 4
+2025-03-12 22:09:15,050 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-03-12 22:09:15,050 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными 1, 1, {'from': 1, 'to': 1}, http://myurl.com, daily
+2025-03-12 22:09:15,050 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-03-12 22:09:15,051 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 1
+2025-03-12 22:09:15,051 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-03-12 22:09:15,051 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 1
+2025-03-12 22:09:15,051 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-03-12 22:09:15,051 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными 2, 2, {'from': 2, 'to': 2}, http://myurl.com, daily
+2025-03-12 22:09:15,051 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-03-12 22:09:15,051 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 2
+2025-03-12 22:09:15,051 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-03-12 22:09:15,051 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 2
+2025-03-12 22:09:15,052 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-03-12 22:09:15,052 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными 5, 5, {'from': 5, 'to': 5}, http://myurl.com, daily
+2025-03-12 22:09:15,052 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-03-12 22:09:15,052 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 5
+2025-03-12 22:09:15,052 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-03-12 22:09:15,052 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 5
+2025-03-12 22:09:15,052 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-03-12 22:09:15,058 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными ghb, {'city': 'street'}, {'from': 15, 'to': 15000}, {'raw': 'http'}, [{'id': 'OTHER', 'name': 'all free days'}]
+2025-03-12 22:09:15,058 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-03-12 22:09:15,058 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 15
+2025-03-12 22:09:15,059 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-03-12 22:09:15,059 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 15000
+2025-03-12 22:09:15,059 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-03-12 22:09:15,059 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными ghb, {'city': 'street'}, {'from': 15, 'to': 15000}, {'raw': 'http'}, [{'id': 'OTHER', 'name': 'all free days'}]
+2025-03-12 22:09:15,059 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-03-12 22:09:15,059 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 15
+2025-03-12 22:09:15,059 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-03-12 22:09:15,059 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 15000
+2025-03-12 22:09:15,059 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-03-12 22:09:15,067 - INFO- api_utils - Старт инициализации объекта классса HH
+2025-03-12 22:09:15,068 - INFO- api_utils - Инициализации объекта классса HH завершена, параметры {'text': '', 'page': 0, 'per_page': 100}
+2025-03-12 22:09:15,068 - INFO- api_utils - Вызван на печать объект класса HH, текущие парамметры: {'text': '', 'page': 0, 'per_page': 100} содержит 0 вакансий
+2025-03-12 22:09:15,072 - INFO- api_utils - Старт инициализации объекта классса HH
+2025-03-12 22:09:15,072 - INFO- api_utils - Инициализации объекта классса HH завершена, параметры {'text': '', 'page': 0, 'per_page': 100}
+2025-03-12 22:09:15,072 - INFO- api_utils - Старт сбора вакансий по тексту looking
+2025-03-12 22:09:15,072 - INFO- api_utils - Проводим подклчение к серверу
+2025-03-12 22:09:15,072 - INFO- api_utils - Ответ полученный от сервера имеет код 400
+2025-03-12 22:09:15,072 - INFO- api_utils - Проводим подклчение к серверу
+2025-03-12 22:09:15,073 - INFO- api_utils - Ответ полученный от сервера имеет код 400
+2025-03-12 22:09:15,074 - INFO- api_utils - Проводим подклчение к серверу
+2025-03-12 22:09:15,074 - INFO- api_utils - Ответ полученный от сервера имеет код 400
+2025-03-12 22:09:15,074 - ERROR- api_utils - Обнаружена ошибка при подлючении к серверу, код ошибки: 400
+2025-03-12 22:09:15,077 - INFO- api_utils - Старт инициализации объекта классса HH
+2025-03-12 22:09:15,077 - INFO- api_utils - Инициализации объекта классса HH завершена, параметры {'text': '', 'page': 0, 'per_page': 100}
+2025-03-12 22:09:15,077 - INFO- api_utils - Старт сбора вакансий по тексту looking
+2025-03-12 22:09:15,078 - INFO- api_utils - Проводим подклчение к серверу
+2025-03-12 22:09:15,078 - INFO- api_utils - Ответ полученный от сервера имеет код 200
+2025-03-12 22:09:15,078 - INFO- api_utils - Обработали информацию по странице № 0
+2025-03-12 22:09:15,078 - INFO- api_utils - Завершена обработка поиска вакансий, всего найдено {len(self.vacancies)} вакансий
+2025-03-12 22:09:15,083 - INFO- utils_filework - Старт инициализации
+2025-03-12 22:09:15,083 - INFO- utils_filework - Завершение инициализации
+2025-03-12 22:09:15,083 - INFO- utils_filework - Пытаемся прочитето из mydata.json данные
+2025-03-12 22:09:15,083 - INFO- utils_filework - Данные из mydata.json прочитаны
+2025-03-12 22:09:15,087 - INFO- utils_filework - Старт инициализации
+2025-03-12 22:09:15,087 - INFO- utils_filework - Завершение инициализации
+2025-03-12 22:09:15,087 - INFO- utils_filework - Пытаемся записать в mydata.json данные
+2025-03-12 22:09:15,087 - INFO- utils_filework - Пытаемся прочитето из mydata.json данные
+2025-03-12 22:09:15,088 - INFO- utils_filework - Данные в mydata.json записаны
+2025-03-12 22:09:15,090 - INFO- utils_filework - Старт инициализации
+2025-03-12 22:09:15,091 - INFO- utils_filework - Завершение инициализации
+2025-03-12 22:09:15,091 - INFO- utils_filework - Пытаемся записать в mydata.json данные
+2025-03-12 22:09:15,091 - INFO- utils_filework - Пытаемся прочитето из mydata.json данные
+2025-03-12 22:09:15,091 - INFO- utils_filework - Данные в mydata.json записаны
+2025-03-12 22:09:15,092 - INFO- utils_filework - Пытаемся прочитето из mydata.json данные
+2025-03-12 22:09:15,092 - INFO- utils_filework - Данные из mydata.json прочитаны
+2025-03-12 22:09:15,093 - INFO- utils_filework - Пытаемся прочитето из mydata.json данные
+2025-03-12 22:09:15,093 - INFO- utils_filework - Данные из mydata.json прочитаны
+2025-03-12 22:09:15,097 - INFO- utils_filework - Старт инициализации
+2025-03-12 22:09:15,097 - INFO- utils_filework - Завершение инициализации
+2025-03-12 22:09:15,097 - INFO- utils_filework - Пытаемся записать в mydata.json данные
+2025-03-12 22:09:15,097 - INFO- utils_filework - Пытаемся прочитето из mydata.json данные
+2025-03-12 22:09:15,098 - INFO- utils_filework - Данные в mydata.json записаны
+2025-03-12 22:09:15,098 - INFO- utils_filework - Пытаемся прочитето из mydata.json данные
+2025-03-12 22:09:15,099 - INFO- utils_filework - Данные из mydata.json прочитаны
+2025-03-12 22:09:15,099 - INFO- utils_filework - Пытаемся прочитето из mydata.json данные
+2025-03-12 22:09:15,099 - INFO- utils_filework - Данные из mydata.json прочитаны
+2025-03-12 22:09:15,103 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 150000, 'to': 300000}, http://myurl.com, daily
+2025-03-12 22:09:15,104 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-03-12 22:09:15,104 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 150000
+2025-03-12 22:09:15,104 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-03-12 22:09:15,104 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
+2025-03-12 22:09:15,104 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-03-12 22:09:15,106 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 150000, 'to': 300000}, http://myurl.com, daily
+2025-03-12 22:09:15,106 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-03-12 22:09:15,107 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 150000
+2025-03-12 22:09:15,107 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-03-12 22:09:15,107 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
+2025-03-12 22:09:15,107 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-03-12 22:09:15,107 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 100000, 'to': 300000}, http://myurl.com, daily
+2025-03-12 22:09:15,107 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-03-12 22:09:15,107 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 100000
+2025-03-12 22:09:15,107 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-03-12 22:09:15,107 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
+2025-03-12 22:09:15,107 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-03-12 22:09:15,110 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 100000, 'to': 300000}, http://myurl.com, daily
+2025-03-12 22:09:15,111 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-03-12 22:09:15,111 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 100000
+2025-03-12 22:09:15,111 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-03-12 22:09:15,111 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
+2025-03-12 22:09:15,111 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-03-12 22:09:15,111 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 100000, 'to': 200000}, http://myurl.com, daily
+2025-03-12 22:09:15,111 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-03-12 22:09:15,112 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 100000
+2025-03-12 22:09:15,112 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-03-12 22:09:15,112 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 200000
+2025-03-12 22:09:15,112 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-03-12 22:09:15,113 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 100000, 'to': 300000}, http://myurl.com, daily
+2025-03-12 22:09:15,113 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-03-12 22:09:15,115 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 100000
+2025-03-12 22:09:15,115 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-03-12 22:09:15,115 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
+2025-03-12 22:09:15,115 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-03-12 22:09:15,117 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': -1, 'to': 300000}, http://myurl.com, daily
+2025-03-12 22:09:15,118 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-03-12 22:09:15,118 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 0
+2025-03-12 22:09:15,118 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-03-12 22:09:15,118 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
+2025-03-12 22:09:15,118 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-03-12 22:09:15,120 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'to': 300000}, http://myurl.com, daily
+2025-03-12 22:09:15,120 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-03-12 22:09:15,120 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 0
+2025-03-12 22:09:15,120 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-03-12 22:09:15,120 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
+2025-03-12 22:09:15,120 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-03-12 22:09:15,122 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': '-1', 'to': 300000}, http://myurl.com, daily
+2025-03-12 22:09:15,122 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-03-12 22:09:15,122 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 0
+2025-03-12 22:09:15,122 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-03-12 22:09:15,123 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
+2025-03-12 22:09:15,123 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-03-12 22:09:15,124 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 500000, 'to': 300000}, http://myurl.com, daily
+2025-03-12 22:09:15,125 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-03-12 22:09:15,125 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 500000
+2025-03-12 22:09:15,125 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-03-12 22:09:15,125 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 500000
+2025-03-12 22:09:15,125 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-03-12 22:09:15,128 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 300000}, http://myurl.com, daily
+2025-03-12 22:09:15,128 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-03-12 22:09:15,128 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 300000
+2025-03-12 22:09:15,128 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-03-12 22:09:15,128 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
+2025-03-12 22:09:15,128 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-03-12 22:09:15,131 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 100000, 'to': 'ghjhghg'}, http://myurl.com, daily
+2025-03-12 22:09:15,131 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-03-12 22:09:15,131 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 100000
+2025-03-12 22:09:15,132 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-03-12 22:09:15,132 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 100000
+2025-03-12 22:09:15,132 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-03-12 22:09:15,134 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 150000, 'to': 300000}, http://myurl.com, daily
+2025-03-12 22:09:15,134 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-03-12 22:09:15,134 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 150000
+2025-03-12 22:09:15,134 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-03-12 22:09:15,134 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
+2025-03-12 22:09:15,135 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
